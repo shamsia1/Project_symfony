@@ -3,8 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {{ encore_entry_link_tags('app') }}
-        {% block stylesheets %}{% endblock %}
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
     <body>
         <header>
@@ -16,8 +18,8 @@
             {% endblock %}
         </div>
         
-        {{ encore_entry_script_tags('app') }}
-        {% block javascripts %}{% endblock %}
+
+        {% block javascripts %}  {{ encore_entry_script_tags('app') }}{% endblock %}
 
     </body>
 </html>
