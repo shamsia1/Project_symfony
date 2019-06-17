@@ -19,11 +19,11 @@ class ArticleType extends AbstractType
             ->add('category', null, ['choice_label' => 'name'])
             ->add('tags', EntityType::class, [
                 'class' => Tag::class,
+                'by_reference' => false,
                 'choice_label' => 'name',
                 'multiple' => true,
-                'expanded' => true,
-            ])
-            ;
+                'expanded' => true,]
+            );
     }
 
     public function configureOptions(OptionsResolver $resolver)

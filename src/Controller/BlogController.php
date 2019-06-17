@@ -109,4 +109,5 @@ class BlogController extends AbstractController
     $articles = $tag->getArticles();
     return $this->render('blog/tag.html.twig', ["articles" => $articles, "tag" => $tag]);
   }
+
 }
